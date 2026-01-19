@@ -17,7 +17,7 @@ const {data:videos,isLoading,error} = useGetAllVideosSearchQuery({
 
 const video = videos?.data?.docs || [] ;
 
-const {data} =api.useGetCurrentUserQuery()
+const {data} =useGetCurrentUserQuery()
 const channel= data?.data || [];
 
     return (
