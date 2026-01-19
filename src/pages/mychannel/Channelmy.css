@@ -140,7 +140,7 @@
 .metadata{
     width: 100%;
     display: flex;
-    font-size: 1rem;
+    font-size: .9rem;
     flex-direction: column;
     justify-content: center;
 }
