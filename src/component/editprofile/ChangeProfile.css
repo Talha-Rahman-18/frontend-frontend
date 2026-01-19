@@ -1,0 +1,82 @@
+.changemain{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.text{
+    height: 100%;
+    width: 35%;
+}
+.changeform{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+#infoform{
+    width: 100%;
+    border: 2px solid black;
+     border-radius: 8px;
+     padding: 1vh;
+}
+.infoform{
+    height: 85%;
+    width: 100%;
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.infoform input{
+    height: 10%;
+    width: 90%;
+    padding: 1%;
+    font-size: 1.2rem;
+    color: black;
+    border-radius: 14px;
+    background-color: transparent;
+}
+.infoform input::placeholder{
+    color: black;
+}
+.infoform label{
+    font-size: 1.1rem;
+    align-self: flex-start;
+}
+
+
+.buttonsave{
+   height: 15%;
+   width: 100%;
+   padding-top: 1vh;
+   border-top: 1px solid black;
+   display: flex;
+   justify-content: flex-end;
+}
+
+@media (max-width:600px) {
+    .changemain{
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+    .text{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    .changeform{
+        height: max-content;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .infoform input{
+        height: 6vh;
+    }
+}
