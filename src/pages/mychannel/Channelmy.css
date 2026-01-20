@@ -138,8 +138,7 @@
     
 }
 .metadata{
-    width: 80%;
-    background-color: aqua;
+    width: 70%;
     display: flex;
     font-size: .8rem;
     flex-direction: column;
@@ -148,7 +147,7 @@
 
 .editchannel{
     height: 100%;
-    width: 30%;
+    width: 35%;
     font-size: .9rem;
     display: flex;
     justify-content: flex-start;
