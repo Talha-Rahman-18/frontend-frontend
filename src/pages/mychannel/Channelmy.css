@@ -138,19 +138,24 @@
     
 }
 .metadata{
-    width: 100%;
+    width: 80%;
+    background-color: aqua;
     display: flex;
-    font-size: .9rem;
+    font-size: .8rem;
     flex-direction: column;
     justify-content: center;
 }
 
 .editchannel{
     height: 100%;
-    width: 35%;
+    width: 30%;
     font-size: .9rem;
+    display: flex;
+    justify-content: flex-start;
    
 }
-
+.componenttags button{
+    font-size: .9rem;
+}
     
 }
