@@ -17,7 +17,7 @@ originalStatus === 401) {
   {
     url: "/users/refresh-token",
     method: "POST",
-    credentials: "include", // 🔥 REQUIRED
+    credentials: "include", 
   },
   api,
   extraOptions
