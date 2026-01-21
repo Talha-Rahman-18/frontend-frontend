@@ -7,13 +7,11 @@ import { Link, useParams } from 'react-router-dom'
 import Commentcard from '../../component/commentcard/Commentcard'
 import './Player.css'
 import Button from '../../component/button/Button'
-import { Postcard } from '../../component/postcard/Postcard'
 import { useToggleVideoLikeMutation } from '../../services/like/likeApi'
 import { useToggleSubscriptionMutation } from '../../services/subscription/subscriptionApi'
 import { useGetCurrentUserQuery } from '../../services/user/userApi'
 import AddPlaylist from '../../component/playlist/AddPlaylist'
-import { api } from '../../services/api'
-
+import { Postcard } from '../../component/postcard/Postcard'
 
 function Player() {
 
