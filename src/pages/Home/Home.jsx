@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import VideoCard from '../../component/video/VideoCard'
-import { useGetCurrentUserQuery } from '../../services/user/userApi'
 import './Home.css'
-import { api } from '../../services/api'
+import { api, useGetcurrentuserQuery } from '../../services/api'
 import { useGetAllVideosQuery, useGetAllVideosSearchQuery } from '../../services/video/videoApi'
 import { Postcard } from '../../component/Postcard/PostCard'
 
@@ -17,8 +16,27 @@ const {data:videos,isLoading,error} = useGetAllVideosSearchQuery({
 
 const video = videos?.data?.docs || [] ;
 
-const {data} =api.useGetCurrentUserQuery()
-const channel= data?.data || [];
+const {
+  data,
+  isLoading:userloading,
+  isFetching,
+  error:usererror
+} = useGetcurrentuserQuery(undefined, {
+  refetchOnMountOrArgChange: true,
+});
+
+console.log({
+  data,
+  userloading,
+  isFetching,
+  usererror,
+});
+
+useEffect(() => {
+  console.log("HOME MOUNTED");
+}, []);
+
+// const channel= data?.data || [];
 
     return (
      <div id='home'>
