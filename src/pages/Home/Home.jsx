@@ -3,7 +3,8 @@ import VideoCard from '../../component/video/VideoCard'
 import './Home.css'
 import { api, useGetcurrentuserQuery } from '../../services/api'
 import { useGetAllVideosQuery, useGetAllVideosSearchQuery } from '../../services/video/videoApi'
-import { Postcard } from '../../component/Postcard/PostCard'
+import PostCard from '../../component/PostCard/PostCard'
+
 
 function Home() {
 
@@ -64,7 +65,7 @@ useEffect(() => {
 
     <div className="vdo">
 
-<Postcard 
+<PostCard 
     _id={vdo?._id}
     tittle={vdo?.tittle}
     thumbnail={vdo?.thumbnail}

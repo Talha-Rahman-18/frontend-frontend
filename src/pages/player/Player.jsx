@@ -11,7 +11,7 @@ import { useToggleVideoLikeMutation } from '../../services/like/likeApi'
 import { useToggleSubscriptionMutation } from '../../services/subscription/subscriptionApi'
 import { useGetCurrentUserQuery } from '../../services/user/userApi'
 import AddPlaylist from '../../component/playlist/AddPlaylist'
-import { Postcard } from '../../component/postcard/Postcard'
+import PostCard from '../../component/PostCard/PostCard'
 
 function Player() {
 
@@ -179,7 +179,7 @@ const allvideos= allvideo?.data?.docs || []
 
             allvideos.map((video,idx)=>(
         <div key={video?._id || idx} className="sidevideos">
-<Postcard 
+<PostCard 
 _id={video?._id}
     tittle={video?.tittle}
     thumbnail={video?.thumbnail}
