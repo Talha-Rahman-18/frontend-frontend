@@ -7,8 +7,8 @@ import { Link, useParams } from 'react-router-dom'
 import Commentcard from '../../component/commentcard/Commentcard'
 import './Player.css'
 import Button from '../../component/button/Button'
+import { Postcard } from '../../component/postcard/Postcard'
 import { useToggleVideoLikeMutation } from '../../services/like/likeApi'
-import { Postcard } from '../../component/Postcard/PostCard'
 import { useToggleSubscriptionMutation } from '../../services/subscription/subscriptionApi'
 import { useGetCurrentUserQuery } from '../../services/user/userApi'
 import AddPlaylist from '../../component/playlist/AddPlaylist'
@@ -118,12 +118,10 @@ const allvideos= allvideo?.data?.docs || []
     <div className="tittleandlike">
         <div id="titles">
 <h2>{video.tittle}</h2>
+</div>
 <p>{formateViews(video.views)}&nbsp;views&nbsp;·&nbsp;{formateTimeAgo(video.createdAt)}</p>
 
-
-
-</div>
-
+    </div>
 <div id="likesave">
     <div className="likeee">
 
@@ -142,7 +140,6 @@ const allvideos= allvideo?.data?.docs || []
    
 </div>
 </div>
-    </div>
 
 
 {/* channel */}
@@ -161,7 +158,7 @@ const allvideos= allvideo?.data?.docs || []
 </div>
 
 <div id="subbtn">
-    <Button id="button" backgroundColor={video.channel.isSubscribed? "whitesmoke" : "red"} text={video.channel.isSubscribed? "Subscribed" : "Subscribe"} width={"85px"} color={video.channel.isSubscribed? "red" : "white"} onClick={handleSubscribe} />
+    <Button id="button" backgroundColor={video.channel.isSubscribed? "whitesmoke" : "red"} text={video.channel.isSubscribed? "Subscribed" : "Subscribe"} width={"200px"} color={video.channel.isSubscribed? "red" : "white"} onClick={handleSubscribe} />
 </div>
 
 </div>

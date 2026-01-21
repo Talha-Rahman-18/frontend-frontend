@@ -39,8 +39,11 @@ useEffect(() => {
 // const channel= data?.data || [];
 
     return (
+
      <div id='home'>
-        
+        {userloading && (
+          <h1 style={{height:"100vh",width:"100vw",textAlign:"center"}}>Loading......</h1>
+        )}
 
 <div className="search">
 
