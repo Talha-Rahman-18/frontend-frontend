@@ -46,7 +46,7 @@ function PlaylistVideos() {
                 </div>
             </div>
             <div className="ownersdata">
-                <h2>By:</h2>
+                <h2>By:&nbsp;&nbsp;</h2>
                 <div id="playchnnlimg">
                      <img src={playlistinfo?.owner?.avatar} alt={playlistinfo?.owner?.username} />
                 </div>

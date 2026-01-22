@@ -93,7 +93,7 @@
 #videoFile{
     opacity: 0;        
   width: 0.1px;      
-  height: 0.1px;    
+  height: 0.1px; 
   position: absolute; 
   z-index: -1;  
     
@@ -122,12 +122,15 @@
 }
 
 #thumbnail{
-    height: 15%;
+    height: 25%;
     width:93%;
     padding: 1%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border: 2px solid rgb(255, 255, 255);
     color: white;
+}
+.inputvideo  input[type="file"]::file-selector-button{
+   height: 100%;
 }
 #titlevideo{
     height: 30%;
@@ -190,6 +193,7 @@
     .videofullcont{
         width: 95vw;
         padding-top: 1vh;
+        position: fixed;
         justify-self: center;
         display: flex;
         align-items: flex-start;
