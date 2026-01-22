@@ -7,6 +7,7 @@ import TweetCard from '../tweet/TweetCard';
 import { useGetCurrentUserQuery, useLoginUserMutation } from '../../services/user/userApi';
 import './Login.css'
 import Logo from '../logo/Logo';
+import toast from 'react-hot-toast';
 
 function Login (){
     const { register, handleSubmit,formState:{errors} } = useForm();
@@ -19,11 +20,12 @@ try {
     const res= await loginUser(data).unwrap();
     if(res?.data?.accessToken && res?.data?.refreshToken){
         localStorage.setItem('token',res.data.accessToken);
+
+        toast.success("Login Successfull")
     }
 navigate("/");    
 } catch (error) {
-    alert(error.data)
-    console.log(error)
+    toast.error("Login failed")
 }
 
 }

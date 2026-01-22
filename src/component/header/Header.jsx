@@ -34,15 +34,21 @@ useEffect(() => {
 const handleLogout = async()=>{
     try {
         await logout().unwrap();
+
         localStorage.removeItem('token');
-        alert("Logout successfull");
+
+        toast.success("Logout successfull");
+
         window.location.reload();
         navigate("/")
         
     } catch (error) {
-        alert(`logout error ${error}`)
+        toast.error("logout error")
+
         localStorage.removeItem('token');
-    } finally {
+
+    } 
+    finally {
     localStorage.removeItem("token");
     navigate("/", { replace: true });
   }

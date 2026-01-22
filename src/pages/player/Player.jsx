@@ -12,6 +12,7 @@ import { useToggleSubscriptionMutation } from '../../services/subscription/subsc
 import { useGetCurrentUserQuery } from '../../services/user/userApi'
 import AddPlaylist from '../../component/playlist/AddPlaylist'
 import PostCard from '../../component/PostCard/PostCard'
+import toast from 'react-hot-toast'
 
 function Player() {
 
@@ -35,7 +36,8 @@ const handlelike = async ()=>{
        refetch();
         
     } catch (error) {
-        alert(`Failed to toggle like! ${error?.message || ""}`);
+        toast.error("Failed to toggle like")
+    console.log(`Failed to toggle like! ${error?.message || ""}`);
     }
 }
 
@@ -46,7 +48,7 @@ const handleSubscribe = async ()=>{
         refetch();
         
     } catch (error) {
-       alert(`You can't subscribe your own channel ${error?.message || ""}`); 
+       toast.error('You can not subscribe your own channel'); 
        
     }
 }
@@ -57,6 +59,7 @@ const allvideos= allvideo?.data?.docs || []
 
 
  const [open, setOpen] = useState(false);
+
   const wrapperRef = useRef(null);
 
   useEffect(() => {
@@ -84,13 +87,14 @@ const allvideos= allvideo?.data?.docs || []
 ) }
 
 {!isLoading && error && (
-<div style={{height:"100vh",width:"100vw",zIndex:50,display:"flex",alignItems:"center",justifyContent:"center"}}><h1>Error loading video{error}</h1></div>
+<div style={{height:"100vh",width:"100vw",zIndex:50,display:"flex",alignItems:"center",justifyContent:"center"}}><h2>Error loading video</h2></div>
 )}
 
 {!isLoading && !error && (
 <div className="playercont">
     <div className="plyleft">
 <div id="videoplay">
+
 {!isLoading && !error && video &&  (
 
         <div className="video" style={{height:"100%",width:"100%",overflow:"hidden"}}>
@@ -111,15 +115,19 @@ const allvideos= allvideo?.data?.docs || []
 
 </div>
 <div id="videoinfos">
+
     {/* //titlee */}
 
-    <div className="tittleandlike">
+<div className="tittleandlike">
         <div id="titles">
 <h2>{video.tittle}</h2>
 </div>
 <p>{formateViews(video.views)}&nbsp;views&nbsp;·&nbsp;{formateTimeAgo(video.createdAt)}</p>
 
-    </div>
+</div>
+
+    {/* likesbuttun */}
+
 <div id="likesave">
     <div className="likeee">
 

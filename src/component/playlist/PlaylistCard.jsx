@@ -26,16 +26,18 @@ const [isOpen,setisOpen] = useState(true);
 const [selectPlaylist,setselectPlaylist] = useState(null);
 
 const [deletePlaylist] = useDeletePlaylistMutation();
-const [updatePlaylist] = useUpdatePlaylistMutation();
+const [updatePlaylist,{isLoading:updateloading}] = useUpdatePlaylistMutation();
 
 const handleDelete = async(playlistId)=>{
     try {
 
         await deletePlaylist(playlistId);
+
+        toast.success("Playlist Deleted Succesfully")
         refetch();
         
     } catch (error) {
-        alert("Failed to delete playlist");
+        toast.error("Failed to delete playlist");
         console.log("Failed to delete playlist");
     }
 }
@@ -73,7 +75,7 @@ const handleEdit = async()=>{
 
       
     } catch (error) {
-    toast.error(`Failed to update the playlist! ${error?.message || ""}`);       
+    toast.error("Failed to update the playlist!");       
     }
 }
 
@@ -130,7 +132,7 @@ return (
 
          </Link>
       
-    ) )):(<div style={{height:"100%",width:"100vw",textAlign:"center"}}><h1>No playlist created </h1></div>)}
+    ) )):(<div style={{height:"100%",width:"100vw",textAlign:"center"}}><h2>No playlist created </h2></div>)}
  </div>
   
 
@@ -151,7 +153,7 @@ return (
                     setisOpen(false);
                 }}
                 />
-            <Button text={"save"} width={"2vw"} height={"40px"}
+            <Button text={updateloading? <i class="fa-solid fa-spinner"></i> : "save"} width={"2vw"} height={"40px"}
              type='submit'
             />
             </div>

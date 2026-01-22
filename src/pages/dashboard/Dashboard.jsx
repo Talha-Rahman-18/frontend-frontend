@@ -4,7 +4,7 @@ import { useGetChannelStatsQuery } from '../../services/dashboard/dashboardApi'
 import { useDeleteVideoMutation, usePublishAVideoMutation, useTogglePublishStatusMutation, useUpdateVideoMutation } from '../../services/video/videoApi';
 import { formateTimeAgo } from '../../utils/formateTimeAgo';
 import Button from '../../component/button/Button';
-
+import toast from 'react-hot-toast'
 
 
 function Dashboard() {
@@ -43,9 +43,9 @@ const videos = user?.videoDetails || [];
 
 const [toggle,{isLoading:toggleLoading}]  = useTogglePublishStatusMutation();
 
-const [deleteVideo] = useDeleteVideoMutation();
+const [deleteVideo,{isLoading:deleteloading}] = useDeleteVideoMutation();
 
-const [updateVideo] = useUpdateVideoMutation();
+const [updateVideo,{isLoading:updateloading}] = useUpdateVideoMutation();
 
 
 const handeditform=(video)=>{
@@ -86,10 +86,12 @@ seteditvideo(null);
 });
 
 
-    alert("video updated succesfully");
-  } catch (error) {
+    toast.success("video updated succesfully");
 
-    alert("video updation failed",error);
+  } catch (error) {
+    toast.error("video updation failed")
+    console.log("video updation failed",error);
+
   }  
 }
 
@@ -100,15 +102,17 @@ const handledelete = async (id)=>{
 try {
  
     await deleteVideo(id).unwrap();
-    alert("Video Deleted Successfully")
+    toast.success("Video Deleted Successfully")
     refetch();
 
 } catch (error) {
-    alert("video delete failed")
+    toast.error("video delete failed")
     console.log("video dlete error",error)
 
 }
 }
+
+// publisetoggle
 
 const togglePublish = async (video)=>{
 try {
@@ -117,7 +121,7 @@ try {
     refetch();
 
 } catch (error) {
-    alert("Failed to toggle publish video")
+    toast.error("Failed to toggle publish video")
     console.log(`Failed to toggle publish video,${error?.message || error}`)
 
 }
@@ -168,7 +172,7 @@ value={form.description}
 onChange={handleChange}
 />
 
-<Button type='submit' text={"save"} />
+<Button type='submit' color={updateloading ? "gray" :" black"} text={updateloading? "saving..." : "save"} />
 
 </div>
 
