@@ -24,7 +24,9 @@
 }
 .metadataplaylist{
     height: 20%;
-    width: 96%;
+    width: 100%;
+    word-break: break-all;
+    overflow: auto;
     padding: 2%;
     position: relative;
     top: -30%;
@@ -37,7 +39,8 @@
 
 .ownersdata{
     height:20vh;
-    width: 100%;
+    width: 90%;
+    word-break: break-all;
     padding-left: 2vw;
     display: flex;
     align-items: center;
