@@ -228,8 +228,9 @@ body{
         align-items: center;
     }
     .sidevideos{
-        height: max-content;
+        height:50vh;
         width: 95%;
+        font-size: 1.1rem;
     }
     .plyform{
     
@@ -246,13 +247,13 @@ body{
  
 @media (max-width:600px) {
     .sidevideos{
-        height: 35vh;
-    }
-    #videoplay{
         height: 40vh;
+    }
+    /* #videoplay{
+        height: 400px;
         width: 98%;
         box-sizing: border-box;
-    }
+    } */
     .plyform{
     width: 50vw;
     position: absolute;

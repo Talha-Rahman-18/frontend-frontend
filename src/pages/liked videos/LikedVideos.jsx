@@ -48,7 +48,7 @@ const videos = data?.data || [];
 
     videos.map((video,idx)=>(
  <div key={video?._id || idx} className="likedvideoss">
-<Postcard 
+<PostCard 
     _id={video?.videoDetails
 ?._id}
     tittle={video?.videoDetails

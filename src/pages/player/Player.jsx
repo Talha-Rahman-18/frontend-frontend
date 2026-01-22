@@ -185,7 +185,7 @@ _id={video?._id}
     thumbnail={video?.thumbnail}
     duration={video?.duration}
     views={video?.views}
-    updatedAt={video?.updatedAt}
+    createdAt={video?.createdAt}
     channel={video?.owner}
 />
         </div>

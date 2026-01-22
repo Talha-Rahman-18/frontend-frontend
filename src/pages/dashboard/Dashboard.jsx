@@ -227,9 +227,9 @@ totalSubscriber}</h2>
 
 <div className="imgg">
     <img style={{height:"40px",width:"40px",borderRadius:"50%",border:"2px solid black"}} src={video?.thumbnail
-} alt="avatar" /> <h4>{video?.tittle}</h4>
+} alt="avatar" /> 
 </div>
-
+<h4>{video?.tittle}</h4>
 <p>{formateTimeAgo(video?.createdAt)}</p>
 
 <div className="operations">
