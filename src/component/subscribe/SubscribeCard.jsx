@@ -17,15 +17,6 @@ const name=current?.data?.username;
 
 const [subscribe] = useToggleSubscriptionMutation();
 
-const handlesub=async (id)=>{
-    try {
-        await subscribe(id).unwrap();
-        refetch();
-    } catch (error) {
-        toast.error(error);
-    }
-
-}
 
 
 
@@ -48,14 +39,12 @@ return(
                     </div>
                     </Link>
                     <div className="subcontent">
-                        <h4>Talha</h4> 
+                        <h4>{subscribe?.fullName}</h4> 
                         <p>{subscribe?.subscriberCount
 }&nbsp;subscribers</p>
                         
                     </div>
-                    <Button 
-                    onClick={()=>handlesub(subscribe?._id)}
-                    text={"subscribed"} />
+                    
                 </div>
        ))
         ) : (<h2 style={{textAlign:"center"}} >No channel subscribed </h2>)}

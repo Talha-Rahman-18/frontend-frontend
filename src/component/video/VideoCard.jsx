@@ -172,6 +172,7 @@ isPublished && (
         <h3>Upload your video here and complete all the information below</h3>
 
       <h1>⬆️</h1>
+      <p style={{color:"red"}}>(Limit : 100mb max)</p>
 
         <label id="labelvideo" htmlFor="videoFile">
             <input

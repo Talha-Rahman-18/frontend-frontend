@@ -45,7 +45,7 @@ function PlaylistVideos() {
             <div className="coverphoto">
                 <img src={playlistinfo?.videos?.[0]?.thumbnail || plyimg} alt={playlistinfo?.name} />
                 <div className="metadataplaylist">
-                    <p>{playlistinfo?.name}</p>
+                    <p style={{height:"max-content",width:"50%",overflow:"auto"}}>{playlistinfo?.name}</p>
                     <p>{playlistinfo?.videos?.length}&nbsp;videos</p>
                 </div>
             </div>
