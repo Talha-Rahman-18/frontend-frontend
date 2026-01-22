@@ -5,12 +5,12 @@ import './Register.css'
 import Logo from "../logo/Logo";
 import Input from "../input/Input";
 import Button from "../button/Button";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Register(){
 
     const navigate = useNavigate();
-    const [registerUser] = useRegisterUserMutation();
+    const [registerUser,{isLoading:regloading}] = useRegisterUserMutation();
     const {register,handleSubmit} = useForm();
 
     const reg = async (data)=>{
@@ -87,7 +87,8 @@ function Register(){
             })}
             />
 
-            <Button type="submit"  text={"Sign Up"} backgroundColor={"skyblue"} color={"white"} width={"50%"} />
+            <Button type="submit"  text={regloading?"Signing Up...":"Sign Up"} backgroundColor={"red"} color={regloading ? "gray" : "white"} width={"100%"} />
+            <p>Already have an account&nbsp;<Link to={'/login'}>Sign In</Link></p>
        </form>
 </div>
     </div>

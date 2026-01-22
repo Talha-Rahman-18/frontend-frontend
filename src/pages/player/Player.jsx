@@ -144,15 +144,15 @@ const allvideos= allvideo?.data?.docs || []
 
 <div id="chnnlsub">
 
-<div id="avatar">
-    <Link to={name===video?.channel?.username? `/mychannel/${video?.channel?.username}` : `/channel/${video?.channel?.username}`}>
+<div id="avatarch">
+    <Link id='avatarch' to={name===video?.channel?.username? `/mychannel/${video?.channel?.username}` : `/channel/${video?.channel?.username}`}>
     <img src={video?.channel?.avatar} alt={video?.channel?.usename} />
     </Link>
 
+</div>
 <div id="chnnlname">
 <p style={{fontFamily:"arial",fontSize:"1.1rem",color:"black"}}>{video?.channel?.fullName}</p>
 <p>{video?.channel?.subscriberCount}&nbsp;subscriber</p>
-</div>
 </div>
 
 <div id="subbtn">
