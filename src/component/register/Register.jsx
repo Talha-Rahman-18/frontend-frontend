@@ -27,10 +27,10 @@ function Register(){
        try {
          await registerUser(formdata).unwrap();
          navigate("/login")
-         alert("Registraition Done")
+         toast.success("Registraition Done")
          
        } catch (error) {
-        alert(`Registration failed: ${error.data?.message || error.message || error}`)
+        toast.error('Registration failed')
         console.log(error)
        }
 
