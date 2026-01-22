@@ -63,7 +63,7 @@ resize: none;
 
 .tweetcontent{
     height:max-content;
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -73,4 +73,11 @@ resize: none;
 .tweetcontent h4,p{
     margin: 0;
     padding: 0;
+}
+
+
+@media (max-width:600px) {
+    .tweetcontent{
+        font-size: .9rem;
+    }
 }
