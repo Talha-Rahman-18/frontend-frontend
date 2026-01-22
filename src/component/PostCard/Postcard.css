@@ -63,12 +63,16 @@
 .allinfo{
     height: 100%;
     width: 80%;
-    overflow-x: hidden;
     text-align:start;
     display: flex;
     flex-direction: column;
     
    
+}
+.tittle{
+    height: 70%;
+    /* overflow: hidden; */
+    background-color: pink;
 }
 .allinfo h3,p{
     margin: 0;

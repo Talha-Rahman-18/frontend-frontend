@@ -37,7 +37,7 @@ function PostCard({
                     </Link>
                 </div>
                 <div className="allinfo">
-                    <h3 >{tittle}</h3>
+                    <h3 className='tittle' >{tittle}</h3>
                     
                     <p>{formateViews(views)}&nbsp;views&nbsp;·&nbsp;{formateTimeAgo(createdAt)}</p>
                     <p>@{username}</p>

@@ -47,7 +47,7 @@ body{
     border: 1px solid rgb(0, 0, 0);
 }
 .tittleandlike{
-    width: 100%;
+    width: 95%;
     padding: 1%;
     height: max-content;
     overflow: hidden;
@@ -57,9 +57,9 @@ body{
 }
 #titles{
     height: 10%;
-    width: 100%;
     margin-bottom: 2%;
     padding-left: 1%;
+    
 }
 
 #likesave{
@@ -228,7 +228,7 @@ body{
         align-items: center;
     }
     .sidevideos{
-        height: 50vh;
+        height: max-content;
         width: 95%;
     }
     .plyform{
