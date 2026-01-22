@@ -52,16 +52,14 @@ function PlaylistVideos() {
 
             <div className="ownersdata">
 
-                <h2>By:&nbsp;&nbsp;</h2>
-
                 <div id="playchnnlimg">
                      <img src={playlistinfo?.owner?.avatar} alt={playlistinfo?.owner?.username} />
                 </div>
-
                      <div id="chnnldata">
                         <p>{playlistinfo?.owner?.fullName}</p>
                          <p>@{playlistinfo?.owner?.username}</p>
                      </div>
+
                
             </div>
 
