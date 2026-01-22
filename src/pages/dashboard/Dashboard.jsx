@@ -187,17 +187,17 @@ onChange={handleChange}
 
            <div id="dashinfos">
             <div className="box">
-                <h1>😎</h1>
+                <h2><i class="fa-solid fa-eye"></i></h2>
                 <p>Total Views</p>
                 <h2>{user?.totalViews}</h2>
             </div>
             <div className="box">
-                <h1>😎</h1>
+                <h2><i class="fa-solid fa-heart"></i></h2>
                 <p>Total Likes</p>
                 <h2>{user?.totalLikes}</h2>
             </div>
             <div className="box">
-                <h1>😎</h1>
+                <h2><i class="fa-solid fa-people-group"></i></h2>
                 <p>Total Subscribers</p>
                 <h2>{user?.
 totalSubscriber}</h2>

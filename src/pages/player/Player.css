@@ -207,9 +207,7 @@ body{
         box-sizing: border-box;
     }
     
-    #chnnlname{
-        width: 100%;
-    }
+    
     #avatar{
         width: 50%;
     }
@@ -249,11 +247,10 @@ body{
     .sidevideos{
         height: 40vh;
     }
-    /* #videoplay{
-        height: 400px;
-        width: 98%;
-        box-sizing: border-box;
-    } */
+  #videoinfos{
+       font-size: .9rem;
+       
+    }
     .plyform{
     width: 50vw;
     position: absolute;

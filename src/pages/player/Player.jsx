@@ -156,7 +156,7 @@ const allvideos= allvideo?.data?.docs || []
 </div>
 
 <div id="subbtn">
-    <Button id="button" backgroundColor={video.channel.isSubscribed? "whitesmoke" : "red"} text={video.channel.isSubscribed? "Subscribed" : "Subscribe"} width={"200px"} color={video.channel.isSubscribed? "red" : "white"} onClick={handleSubscribe} />
+    <Button id="button" backgroundColor={video.channel.isSubscribed? "whitesmoke" : "red"} text={video.channel.isSubscribed? "Subscribed" : "Subscribe"} width={"100px"} color={video.channel.isSubscribed? "red" : "white"} onClick={handleSubscribe} />
 </div>
 
 </div>
