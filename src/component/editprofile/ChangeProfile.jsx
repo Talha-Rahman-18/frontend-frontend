@@ -46,7 +46,7 @@ const handlEdit =async (e)=>{
         <div className="changemain">
             <div className="text">
                 <h3>Personal Information</h3>
-                <p>Update Your Pictures and Account Information</p>
+                <p style={{width:"100%",textAlign:"center"}}>Update Your Pictures and Account Information</p>
             </div>
             <div className="changeform">
                 <form id='infoform' onSubmit={handlEdit}>

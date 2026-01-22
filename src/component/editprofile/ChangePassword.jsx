@@ -60,7 +60,7 @@ e.preventDefault();
         <div className="passchangemain">
             <div className="passtext">
                 <h3>Password Change</h3>
-                <p>Update Your Password</p>
+                <p style={{width:"100%",textAlign:"center"}}>Update Your Password</p>
             </div>
             <div className="passchangeform">
                 <form id='passinfoform' onSubmit={handlChangepass}>

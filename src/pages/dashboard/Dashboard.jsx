@@ -182,7 +182,7 @@ onChange={handleChange}
            <div className="dashtext">
             <h1>Admin Panel</h1>
             <h2>Welcome, {user?.username}</h2>
-            <p>Seamless Video Management, Elevated Results.</p>
+            <p style={{width:"100%",textAlign:"center"}}>Seamless Video Management, Elevated Results.</p>
            </div>
 
            <div id="dashinfos">
