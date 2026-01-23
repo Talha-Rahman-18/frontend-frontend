@@ -8,6 +8,7 @@ import plyimg from './playlist.jpg'
 import Button from '../../component/button/Button';
 import PostCard from '../../component/PostCard/PostCard'
 import toast from 'react-hot-toast';
+import { useGetCurrentUserQuery } from '../../services/user/userApi';
 
 
 
@@ -16,7 +17,11 @@ function PlaylistVideos() {
     const {playlistId} = useParams();
     const {data,error,isLoading,refetch} = useGetPlaylistByIdQuery(playlistId);
     
+const {data:userdata} = useGetCurrentUserQuery();
+const user = userdata?.data?._id;
+
     const playlistinfo = data?.data || [];
+
     const PlaylistVideos = data?.data?.videos || [];
 
     const [deletefromplaylist] = useRemoveVideoFromPlaylistMutation();
@@ -89,9 +94,13 @@ PlaylistVideos.map((video,idx)=>(
 
 </div>
 
+{playlistinfo?.owner?._id === user && (
+
 <div className="buttondelete">
     <Button text={<i class="fa-solid fa-trash"></i>} height={"50px"} width={"1vw"} backgroundColor={"transparent"} onClick={()=>deletevideo(video?._id)} />
 </div>
+)}
+
                     </div>
 
                 ))

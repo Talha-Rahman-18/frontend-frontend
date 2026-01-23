@@ -88,6 +88,7 @@ return (
             type={"text"} 
             height={"40px"} 
             width={"95%"} 
+            padding={"1vw"}
             borderRadius={"8px"} />
 
           <Button

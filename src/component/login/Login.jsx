@@ -23,7 +23,10 @@ try {
 
         toast.success("Login Successfull")
     }
-navigate("/");    
+    
+    navigate("/");    
+    window.location.reload();
+
 } catch (error) {
     toast.error("Login failed")
 }

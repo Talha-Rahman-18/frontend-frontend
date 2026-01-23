@@ -9,6 +9,7 @@ import {confirmDelete} from '../../utils/confirmDelete'
 import { formateTimeAgo } from '../../utils/formateTimeAgo'
 import Button from '../button/Button'
 import Input from '../input/Input'
+import { useGetCurrentUserQuery } from '../../services/user/userApi'
 
 
 function PlaylistCard ({data, editAndDelete=true}){
@@ -21,6 +22,10 @@ const {data:playlistsData,refetch} = useGetUserPlaylistsQuery(data,{skip:!data})
 
 
 const playlists = playlistsData?.data || [];
+
+const {data:userdata} = useGetCurrentUserQuery();
+const user = userdata?.data?._id ;
+console.log(user)
 
 const [isOpen,setisOpen] = useState(true);
 const [selectPlaylist,setselectPlaylist] = useState(null);
@@ -104,6 +109,8 @@ return (
             </div>
         </div>
 
+{playlist?.owner == user && (
+
         <div className="edits">
 
             <Button text={<i class="fa-solid fa-pen-to-square"></i>} width={"50%"}
@@ -125,6 +132,8 @@ return (
             />
             
         </div>
+)}
+
 
         </div>
 
