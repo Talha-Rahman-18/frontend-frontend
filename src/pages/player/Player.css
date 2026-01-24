@@ -122,8 +122,9 @@ body{
 }
 #avatarch{
     height: 100%;
-    width:30%;
+    width:10%;
     display: flex;
+    justify-content: end;
     gap: 4%;
 }
 #avatarch img{
@@ -252,6 +253,10 @@ body{
   #videoinfos{
        font-size: .9rem;
        
+    }
+    #avatarch{
+        width: 25%;
+        justify-content: center;
     }
     .plyform{
     width: 50vw;
