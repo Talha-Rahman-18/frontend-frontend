@@ -119,14 +119,14 @@ const ismassenger = /FBAN|FBAV|Messenger/i.test(navigator.userAgent)
 
     {auth?  (
  <div className="lgout">
-        <Button  height={"70px"} width={"70px"} borderRadius={"50%"} text={<i class="fa-solid fa-power-off"></i>} color={"white"} backgroundColor={"red"} onClick={handleLogout} />
+        <Button  height={"70px"} width={"70px"} borderRadius={"50%"} text={<i class="fa-solid fa-power-off"></i>} color={"white"} backgroundColor={"red"} onClick={()=>{handleLogout,setopen(false)}} />
     <h2>Logout</h2>
     </div>
     ) : (
        <div className="lgout">
-        <Button  height={"40px"} width={"120px"} text={"Login"} color={"white"} backgroundColor={"red"} onClick={()=>navigate("/login")} />
+        <Button  height={"40px"} width={"120px"} text={"Login"} color={"white"} backgroundColor={"red"} onClick={()=>{navigate("/login"),setopen(false)}} />
 
-        <Button  height={"40px"} width={"120px"} text={"Register"} color={"white"} backgroundColor={"red"} onClick={()=>navigate("/register")} />
+        <Button  height={"40px"} width={"120px"} text={"Register"} color={"white"} backgroundColor={"red"} onClick={()=>{navigate("/register"),setopen(false)}} />
     </div>
     )}
     
