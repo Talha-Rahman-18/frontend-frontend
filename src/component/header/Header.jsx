@@ -99,19 +99,19 @@ const ismassenger = /FBAN|FBAV|Messenger/i.test(navigator.userAgent)
 <div className="bars">
     
     
-    <Link to={'/mychannel-likedvideos'} >
+    <Link onClick={()=>setopen(false)} to={'/mychannel-likedvideos'} >
     <i class="fa-regular fa-thumbs-up"></i>Liked Videos
     </Link>
     
-    <Link to={`/mychannel/${name}`} >
+    <Link onClick={()=>setopen(false)} to={`/mychannel/${name}`} >
    <i class="fa-regular fa-file-video"></i>My Content
     </Link>
     
-   <Link to={'/support'} >
+   <Link onClick={()=>setopen(false)} to={'/support'} >
    <i class="fa-regular fa-circle-question"></i>Support
    </Link>
    
-   <Link to={'/mydashboard'} >
+   <Link onClick={()=>setopen(false)} to={'/mydashboard'} >
    <i class="fa-solid fa-gear"></i>Setting
    </Link>
 </div>
