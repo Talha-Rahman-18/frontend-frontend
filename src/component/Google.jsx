@@ -28,12 +28,12 @@ if(res?.data?.accessToken && res?.data?.refreshToken){
 localStorage.setItem("token",res?.data?.accessToken)
 
 toast.success("google login successfull")
-    window.location.reload();
 
 
 }
 
 navigate("/")
+window.location.reload();
 
 
 } catch (error) {
